@@ -1,0 +1,32 @@
+/*BeautifyScrollBar.less*/
+/* 屏幕分辨率适配(视口)*/
+@remvw:1920 /100vw;
+
+::-webkit-scrollbar {
+  width: 10 / @remvw; /*对垂直流动条有效*/
+  height: 10 / @remvw; /*对水平流动条有效*/
+}
+/*定义外层滚动槽*/
+::-webkit-scrollbar-track-piece {
+  background-color: white;
+  border-radius: 6 / @remvw;
+}
+
+/*定义内层 滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 6 / @remvw;
+  background-color: #ccc;
+}
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: #1890ff;
+// }
+
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/*定义边角样式*/
+::-webkit-scrollbar-corner {
+  display: none;
+}

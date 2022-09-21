@@ -82,16 +82,16 @@
         <br>
         <div class="home images" id="viewerjs">
           <div class="imageUrl">
-              <img alt="Vue logo" src="../assets/img/introduce2.webp"/>
+              <img alt="Vue logo" src="../assets/img/introduce2.webp" />
           </div>
           <div class="imageUrl">
-            <img alt="Vue logo" src="../assets/img/introduce3.webp"/>
+            <img alt="Vue logo" src="../assets/img/introduce3.webp" />
           </div>
           <div class="imageUrl">
-            <img alt="Vue logo" src="../assets/img/introduce.webp"/>
+            <img alt="Vue logo" src="../assets/img/introduce.webp" />
           </div>
           <div class="imageUrl">
-            <img alt="Vue logo" src="../assets/img/introduce4.webp"/>
+            <img alt="Vue logo" src="../assets/img/introduce4.webp" />
           </div>
       </div>
       </div>
@@ -123,7 +123,7 @@
             </div>
           </div>
           <div class="address-datails-content_row2">
-               <Bmap></Bmap>
+               <Bmap ></Bmap>
           </div>
       </div>
     </div>
@@ -154,22 +154,10 @@ export default {
     onMounted(() => {
       nextTick(() => {
         eventView.event = new Viewer(document.getElementById('viewerjs'), {
-          navbar: true,
+          navbar: false,
           title: false,
           movable: false, // 图片拖拽
-          // toolbar: {
-          //   zoomIn: 1,
-          //   zoomOut: 1,
-          //   oneToOne: 1,
-          //   reset: 1,
-          //   prev: 1,
-          //   play: 0, // 全屏展示
-          //   next: 1,
-          //   rotateLeft: 1,
-          //   rotateRight: 1,
-          //   flipHorizontal: 1,
-          //   flipVertical: 1
-          // },
+          toolbar: false,
           show: function () {
             eventView.event.update()
           }
